@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate</title>
+  <link rel="stylesheet" href="Donate.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" />
+  <link rel="icon" href="photos/unity+logo.png" sizes="32x32" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+</head>
+
+<body style="background-color: rgba(255, 246, 235, 0.671);">
+  <script>
+    function back(element) {
+      $(".amount").css("background-color", "#ffffff").css("color", "#000000");
+      $(element).css("background-color", "#AB5A10").css("color", "#ffffff");
+      $(".other-amount").css("background-color", "#ffffff").css("color","#000000")
+    }
+
+    $(document).ready(function () {
+      $(".inpu").change(function () {
+        $(".inpu").not(this).prop('checked', false);
+      });
+    });
+  </script>
+
+</html>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand loggo" href="index.html"><span style="color: #592B00C9;">Unity</span><span
+        style="color: #AB5A10BF;">+</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-items nav-list navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link nav-link-item" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Carousel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            NGOs
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Welfare</a></li>
+            <li><a class="dropdown-item" href="#">Cure Society</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">more info -></a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button class="signin-btn btn " type="submit"><img src="photos/Vector.png" alt=""></button>
+      </form>
+    </div> -->
+  </div>
+</nav>
+
+<div class="section1">
+  <div class="nn">
+    <h5>NGOs | Donate</h5>
+  </div>
+  <div style="display: flex;">
+    <div class="image-1"><img src="photos/Ellipse 25.png" alt=""></div>
+    <div class="donate">
+      <h1 style="margin-bottom: 1.3rem;">Donate now</h1>
+      <div style="display: flex;">
+        <ul class="list">
+          <li><input class="inpu" type="checkbox" name="" id="One-Time">
+            <label for="One-Time" class="checkbox-label">One Time</label>
+          </li>
+          <li><input class="inpu" type="checkbox" name="" id="Month">
+            <label for="Month" class="checkbox-label">Monthly</label>
+          </li>
+        </ul>
+        <!-- <div class="pay"><input type="button" value="Card Payment"></div> -->
+      </div>
+      <div class="sub1">
+        <div class="rup">
+          <div><button class="amount" onclick="back(this)">100</button></div>
+          <div><button class="amount" onclick="back(this)">300</button></div>
+          <div><button class="amount" onclick="back(this)">500</button></div>
+        </div>
+        <div class="rup " style="margin-top: 1rem;">
+          <div><button class="amount" onclick="back(this)">1000</button></div>
+          <div><input class="other-amount amount other-amount" type="text" name="Other" id="amountInput" onclick="back(this)" placeholder="Other Amount"></div>
+        </div>
+        <div class="donate_btn" style="padding: 2.2rem 20.2rem;">
+          <button type="button" id="donateBtn" class="fpay">Donate</button></div>
+      </div>
+
+      <div class="btn-pay">
+
+      </div>
+
+    </div>
+    <!-- <div style="padding-top: 3.4rem;"><button type="button" class="fpay fpay2">Card Payment</button></div> -->
+  </div>
+</div>
+<div class="section2">
+  <h2 class="heead"><span style="color:#592B00C9;">Unity</span><span style="color: #AB5A10BF;">+</span></h2>
+  <p class="paraBelowDonate">Your donation plays a crucial role in helping us achieve our goals and make a meaningful difference in the lives of those in need. Whether you choose to contribute a small or large amount, every donation matters and contributes towards bringing about positive change.
+
+    By donating to , you are joining us in our mission to . Your support enables us to provide resources to schools, plant trees, offer medical assistance, etc. , directly impacting the lives of individuals and communities in need.
+  </p>
+
+</div>
+<section class="campaigns">
+  <div class="container">
+  
+    <div class="one">
+        <div class="head"><h3>Sewing Machine and Clothes Donation</h3>
+            <div class="dum"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p></div>
+        </div>
+        <div class="location">
+            <h2>Location</h2>
+            <p>Kaduna, Nigeria</p>
+            </div>
+        <div class="vara">
+            <!-- <div class="cir"><img src="photos\solar_share-bold-duotone.png" alt=""></div> -->
+            <!-- <div class="cir" style="color: black;"><b>Donate</b></div> -->
+    </div>        
+        </div>
+  
+        <div class="line"></div>
+  
+  
+         <div class="second">
+            
+            <div class="stat com">
+            <h2>595+</h2>
+            <p>Donation Received</p>
+            </div>
+            <div class="stat com">
+            <h2>₦ 48M</h2>
+            <p>Money Donated</p>
+            </div>
+            
+            
+             <div class="campaigns com">
+            <h2>35+</h2>
+            <p>Active Campaigns</p>
+            </div>
+            <div class="charity com">
+            <h2>₦ 5,000</h2>
+            <p>Opened Charity</p>
+            </div>
+            <!--<div class="donate-button">
+            <button>Donate</button>
+            </div> -->
+            <div class="cost com">
+            <h2>₦ 2.5 Million</h2>
+            <p>Total Cost</p>
+            </div></div> 
+  </div>
+  <div class="container">
+  
+    <div class="one">
+        <div class="head"><h3>Sewing Machine and Clothes Donation</h3>
+            <div class="dum"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p></div>
+        </div>
+        <div class="location">
+            <h2>Location</h2>
+            <p>Kaduna, Nigeria</p>
+            </div>
+        <div class="vara">
+            <!-- <div class="cir"><img src="photos\solar_share-bold-duotone.png" alt=""></div>
+            <div class="cir" style="color: black;"><b>Donate</b></div> -->
+    </div>        
+        </div>
+  
+        <div class="line"></div>
+  
+  
+         <div class="second">
+            
+            <div class="stat com">
+            <h2>595+</h2>
+            <p>Donation Received</p>
+            </div>
+            <div class="stat com">
+            <h2>₦ 48M</h2>
+            <p>Money Donated</p>
+            </div>
+            
+            
+             <div class="campaigns com">
+            <h2>35+</h2>
+            <p>Active Campaigns</p>
+            </div>
+            <div class="charity com">
+            <h2>₦ 5,000</h2>
+            <p>Opened Charity</p>
+            </div>
+            <!--<div class="donate-button">
+            <button>Donate</button>
+            </div> -->
+            <div class="cost com">
+            <h2>₦ 2.5 Million</h2>
+            <p>Total Cost</p>
+            </div></div> 
+  </div>
+  <div class="container">
+  
+    <div class="one">
+        <div class="head"><h3>Sewing Machine and Clothes Donation</h3>
+            <div class="dum"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p></div>
+        </div>
+        <div class="location">
+            <h2>Location</h2>
+            <p>Kaduna, Nigeria</p>
+            </div>
+        <div class="vara">
+            <!-- <div class="cir"><img src="photos\solar_share-bold-duotone.png" alt=""></div>
+            <div class="cir" style="color: black;"><b>Donate</b></div> -->
+    </div>        
+        </div>
+  
+        <div class="line"></div>
+  
+  
+         <div class="second">
+            
+            <div class="stat com">
+            <h2>595+</h2>
+            <p>Donation Received</p>
+            </div>
+            <div class="stat com">
+            <h2>₦ 48M</h2>
+            <p>Money Donated</p>
+            </div>
+            
+            
+             <div class="campaigns com">
+            <h2>35+</h2>
+            <p>Active Campaigns</p>
+            </div>
+            <div class="charity com">
+            <h2>₦ 5,000</h2>
+            <p>Opened Charity</p>
+            </div>
+            <!--<div class="donate-button">
+            <button>Donate</button>
+            </div> -->
+            <div class="cost com">
+            <h2>₦ 2.5 Million</h2>
+            <p>Total Cost</p>
+            </div></div> 
+  </div>
+</section>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  <a style="text-decoration: none;" href="#navbar">
+    <div class="col footer-logo-name">
+      <img width="43px" src="photos/unity+logo.png" alt="">
+      <h2 class="text-muted" style="padding: 0 1rem;">Unity+</h2>
+     </div>
+  </a>
+  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+  </a>
+
+  <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+  </ul>
+</footer>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="frontend.js"></script>
+</body>
+
+</html>

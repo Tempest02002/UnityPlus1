@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work Sans:wght@400;500;600&display=swap" />
+  <title>Unity+</title>
+  <link rel="icon" href="photos/unity+logo.png" sizes="32x32" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand loggo" href="#Home"><span style="color: #592B00C9;">Unity</span><span
+            style="color: #AB5A10BF;">+</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-items nav-list navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link nav-link-item" aria-current="page" href="#Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#carouselExampleIndicators">Carousel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#Services" tabindex="-1" aria-disabled="true">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#About" tabindex="-1" aria-disabled="true">About Us</a>
+            </li>
+            </ul>
+            <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                NGOs
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Welfare</a></li>
+                <li><a class="dropdown-item" href="#">Cure Society</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">more info -></a></li>
+              </ul>
+            </li> -->
+
+           <!-- sign in beg -->
+           <div class="nameLogOut">
+            <button id="subFinalSignIn" class="signin-btn btn">Sign in</button>
+            <button class="logoutBtn">Logout</button>
+          </div>
+            <div class="form">
+              <div class="signin">
+                <div class="sign_in_content">
+                  <div class="signin_head">
+                      <h3>Sign in</h3>
+                      <span class="close">&times;</span>
+                      </div>
+                  <form>
+                    <div class="numberEntity">
+                      <label for="number">Phone:</label>
+                      <input type="text" class="form-control" name="number" id="number" required><br>
+                    </div>  
+                    <div class="otp otp1">
+                      <h5>Enter Otp</h5>
+                      <div class="otp-input-fields">
+                        <input type="text" class="otp__digit otp__digit1 otp__field__1">
+                        <input type="text" class="otp__digit otp__digit1 otp__field__2">
+                        <input type="text" class="otp__digit otp__digit1 otp__field__3">
+                        <input type="text" class="otp__digit otp__digit1 otp__field__4">
+                      </div>
+                    </div>
+                    <input class="sub" type="submit" value="Submit">
+                    <h6 >Please Enter a valid number</h6>
+                    <p class="reg">Sign up now</p>
+                    <p id="notExist" style="color: red; text-decoration: none;"></p>
+                    <button class="otpver">Submit</button>
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="newsign">
+              <div class="newsign_content">
+                <div class="newsign_head">
+                  <h3>Sign up</h3>
+                <span class="close">&times;</span>
+                </div>
+                <div class="newsign_form" >
+                  <form id="register-form">
+                    <div class="form-group">
+                      <label for="username">Username:</label>
+                      <input type="text" class="form-control" id="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone:</label>
+                      <input type="text" class="form-control" id="phone" placeholder="Enter phone" required>
+                    </div>
+                    <div class="otp otp2">
+                      <h4>Enter OTP recieved </h4>
+                      <div class="otp-input-fields">
+                        <input type="text" class="otp__digit otp__digit2 otp__field__1">
+                        <input type="text" class="otp__digit otp__digit2 otp__field__2">
+                        <input type="text" class="otp__digit otp__digit2 otp__field__3">
+                        <input type="text" class="otp__digit otp__digit2 otp__field__4">
+                      </div>
+                    </div>
+                    <input type="submit" value="submit" class="btn btn-primary sub2">
+                    <h6>Please Enter valid details</h6>
+                    <button type="submit" class="btn otpver1">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </nav>
+  <div id="Home" class="photos-section">
+    <div class="image-set">
+      <img class="image" src="photos/img-collage.png" alt="">
+      <!-- <img class="img1" alt="" src="photos/image 492.png"/>
+        <img class="img3" alt="" src="photos/Ellipse 25.png"/>
+        <img class="img2" alt="" src="photos/image 491.png"/> -->
+      </div>
+      <div class="write1">
+        <h2><span style="color: #592B00C9;"> Unity+ </span>Comes with </h2>
+        <div>
+          <h5>Empowering Change, Uniting Hearts: Your Gateway to Impactful NGO Events!</h5>
+          <p>Our organization is dedicated to supporting and uplifting NGOs that are working towards meaningful causes. Through our platform, we connect donors and NGOs, fostering a community of compassion and collaboration.
+          </p>
+          <a href="/UnityPlus2/frontend/Donate.html"><button class="write1-donate-btn">Donate Now</button></a>
+        </div>
+      </div>
+  </div>
+  <div id="carouselExampleIndicators" class="section-2 carousel slide" data-bs-ride="carousel" >
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://t4.ftcdn.net/jpg/03/81/88/89/360_F_381888917_NP2yUPJqrAXJaxldQobMaKKkHuVb6aBJ.jpg"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://t4.ftcdn.net/jpg/03/81/88/89/360_F_381888917_NP2yUPJqrAXJaxldQobMaKKkHuVb6aBJ.jpg"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://t4.ftcdn.net/jpg/03/81/88/89/360_F_381888917_NP2yUPJqrAXJaxldQobMaKKkHuVb6aBJ.jpg"
+          class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="section-3">
+    <div class="card card-set3" >
+      <img src="https://static.helpjuice.com/helpjuice_production/uploads/upload/image/4752/direct/1680854606772-Employee%20Development.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Development NGOs</h5>
+        <p class="card-text">Work on long-term projects to improve the economic and social well-being of communities.
+          Provide assistance in areas such as education, healthcare, infrastructure, and economic development.</p>
+        <div class="parent">
+          <div class="view_more">
+            <h1 >Development NGOs</h1>
+            <p>
+              </p>
+          </div>
+          <button onclick="redirectNgo('developmental')" class="view-more btn ">View More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card card-set3" >
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/world-humanitarian-day-7131109-5784099.png?f=webp" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Relief and Humanitarian NGOs</h5>
+        <p class="card-text">Respond to emergencies and disasters, providing immediate relief and aid to affected populations.
+          Engage in disaster response, refugee assistance, and humanitarian efforts.</p>
+          <div class="parent">
+            <div class="view_more">
+              <h1 >Title-2</h1>
+              <p>body-2</p>
+            </div>
+            <button onclick="redirectNgo('Relief and Humanitarian')" class="view-more btn ">View More</button>
+          </div>
+      </div>
+    </div>
+    <div class="card card-set3" >
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/8aa80772337497.5be3e20629dfc.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Environmental NGOs</h5>
+        <p class="card-text">Focus on conservation, protection of natural resources, and addressing environmental issues.
+          Work on initiatives related to climate change, biodiversity, and sustainable development.</p>
+        <div class="parent">
+          <div class="view_more">
+            <h1 >Title-3</h1>
+            <p>body-3</p>
+          </div>
+          <button onclick="redirectNgo('Environmental')" class="view-more btn ">View More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card card-set3" >
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/healthcare-5378096-4494352.png?f=webp" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Health NGOs</h5>
+        <p class="card-text">Address healthcare issues and work towards improving public health.
+          Engage in healthcare delivery, disease prevention, and health education programs.</p>
+          <div class="parent">
+            <div class="view_more">
+              <h1 >Title-4</h1>
+              <p>body-4</p>
+            </div>
+            <button onclick="redirectNgo('Health')" class="view-more btn ">View More</button>
+          </div>
+      </div>
+    </div>
+    <div class="card card-set3" >
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/011/277/869/small/female-school-teacher-in-classroom-smiling-young-woman-standing-beside-blackboard-teaching-lesson-education-knowledge-concept-school-banner-cartoon-illustration-vector.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Education NGOs</h5>
+        <p class="card-text">Focuses on addressing issues related to education, and working towards the improvement of educational outcomes for individuals and communities.</p>
+        <div class="parent">
+          <div class="view_more">
+            <h1 >Title-5</h1>
+            <p>body-5</p>
+          </div>
+          <button onclick="redirectNgo('educational')" class="view-more btn ">View More</button>
+        </div>
+      </div>
+    </div>
+    <div class="card card-set3">
+      <img src="https://img.freepik.com/premium-vector/flat-women-right-vector-illustration_946414-196.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Women's Rights NGOs</h5>
+        <p class="card-text">Focus on promoting gender equality and empowering women.
+          Work on issues such as reproductive rights, violence against women, and economic empowerment.</p>
+          <div class="parent">
+            <div class="view_more">
+              <h1 >Title-6</h1>
+              <p>body-6</p>
+            </div>
+            <button onclick="redirectNgo(`Women's Right`)" class="view-more btn ">View More</button>
+          </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- view more popup box start -->
+  <!-- <div class="popup-box">
+    <div class="content">
+      <div class="popup-header">
+        <h2>Lorem Ipsum</h2>
+             <span class=" popup-close-btn  popup-close-icon">&times;</span>
+      </div>
+      <div class="popup-body">
+      </div>
+      <div class="popup-footer">
+        <button class="btne popup-close-btn">Close</button>
+      </div>
+    </div>
+  </div> -->
+  <!-- view more popup box end -->
+
+  <div class="section-4">
+    <div class="sec4-headings">
+      <h6 style="color: #AB5A10;">Testimonial</h6>
+      <h2>What People Say About Us</h2>
+    </div>
+      <div class="card-set4">
+        <div class="card card-set4-cards" >
+          <div class="card-body test">
+            <h1 style="color: #ab5b10ae; font-size: 3.5rem;">“</h1>
+            <h5 class="card-title">Kindness</h5>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">kindness is not just a personal attribute; it's a transformative tool that shapes a healthier, more productive, and compassionate work environment,It involves showing empathy, understanding.</p>
+            <div class="card-developer">
+              <a href="#" ><img style="width: 4rem;" src="photos/developer.png" alt=""></a>
+              <span style="font-size: 1.12rem;">Shivansh Sharma</span>
+            </div>
+          </div>
+        </div>
+        <div class="card card-set4-cards" >
+          <div class="card-body">
+            <h1 style="color: #ab5b10ae; font-size: 3.5rem;">“</h1>
+            <h5 class="card-title">Humanity</h5>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Humanity serves as the common thread that binds us all. At its core, the essence of humanity lies in compassion, empathy, and a shared responsibility for the well-being of one another.</p>
+            <div class="card-developer">
+              <a href="#" ><img style="width: 4rem;" src="photos/developer.png" alt=""></a>
+              <span style="font-size: 1.12rem;">Dhruv Baliyan</span>
+            </div>
+          </div>
+        </div>
+        <div class="card card-set4-cards" >
+          <div class="card-body">
+            <h1 style="color: #ab5b10ae; font-size: 3.5rem;">“</h1>
+            <h5 class="card-title">Ethics & Morality</h5>
+            <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+            <p class="card-text">Ethics and morality serve as guiding principles that shape decision-making. Upholding a strong ethical foundation is not merely a legal obligation but a commitment to integrity and accountability.</p>
+            <div class="card-developer">
+              <a href="#" ><img style="width: 4rem;" src="photos/developer.png" alt=""></a>
+              <span style="font-size: 1.12rem;">Aryan Singh</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div id="About" class="section-5">
+    <div class="image-set">
+      <img class="image" src="photos/img-collage.png" alt="">
+      </div>
+      <div class="AboutUs">
+        <div class="write1">
+          <h6 style="color: #AB5A10;">About Us</h6>
+          <h2 style="color: #77593c">Unity<span style="color: #8d4501c9;">+</span></h2>
+            <p>Unity+ suggests unity and positivity, which can be appealing for a charity or donation website. The "Plus" in the name adds a sense of additional value or contribution. Overall, it's a versatile and modern-sounding choice that could work well for a variety of NGO events. If it resonates with the mission and values of your organization.</p>
+        </div>
+        <div class="donate-charity">
+          <span>Donate</span>
+          <span style="color: #894e18bc;">|</span>
+          <span>Charity</span>
+        </div>
+        <a href="/UnityPlus2/frontend/Donate.html"><button class="about-donate-btn">Donate Now</button></a>
+      </div>
+  </div>
+  
+
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <a style="text-decoration: none;" href="#navbar">
+      <div class="col footer-logo-name">
+        <img width="43px" src="photos/unity+logo.png" alt="">
+        <h2 class="text-muted" style="padding: 0 1rem;">Unity+</h2>
+       </div>
+    </a>
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+    </ul>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="frontend.js"></script>
+</body>
+</html>

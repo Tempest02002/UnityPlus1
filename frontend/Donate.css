@@ -1,0 +1,272 @@
+*{
+  font-family: 'Work Sans';
+}  
+/* .loggo{
+  font-weight: 600;
+  text-decoration: underline;
+} */
+/* Navbar */
+.navbar{
+  margin: 0.3rem 3.2rem;
+}
+.view{
+  color: #592B00C9;
+  border: none
+}
+.signin-btn:hover{
+  background-color: #512700a2;
+  color: #fff4e9;
+}
+.nav-item{
+ color: #AB5A10;
+}
+.nav-item a:hover{
+  color:#592B00C9;
+}
+.navbar-items{
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-column-gap: 1rem;
+  
+}
+.nav-link-item{
+  display: flex;
+  justify-content: space-between;
+}
+.nn{
+  color: #AB5A10;
+  height: 4rem;
+  width: 12.9rem;
+  text-align: right;
+  padding-top:1.1rem ;
+}
+.image-1 img{
+  width: 30rem;
+  padding: 1.2rem 3.4rem;
+}
+.donate{
+  color: #AB5A10;
+  width: 17rem;
+  height: 9rem;
+  padding: 3rem 1rem;
+}
+.list {
+  display: flex;
+  list-style: none;
+  padding-left: 0rem;
+}
+.list li{
+  width: 13rem;   
+}
+.checkbox-label{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* .pay{
+  width: 1.5rem;
+  height: 1.2rem;
+} */
+.sub1{
+  width: 42rem;
+  height: 13rem;
+  padding: 2rem 0.3rem;
+}
+.amount{
+  width: 10rem;
+  height: 3.6rem;
+  border-radius: 10px;
+  background-color:#ffffff;
+  border: 1px solid #AB5A10;
+}
+.rup{
+  list-style: none;
+  display: flex;
+}
+.rup div{
+  width: 12rem;
+}
+
+.other-amount{
+  width: 22rem;
+  height: 3.6rem;
+  text-align: center;
+  text-align: center;
+}
+.fpay{
+  width:13rem;
+  align-items: center;
+  background-color: rgba(171, 90, 16, 0.8000000119);
+  border-radius: 0 0 3rem 0;
+  color: #ffffff;
+  display: flex;
+  flex-shrink: 0;
+  font-family: Work Sans, 'Source Sans Pro';
+  font-size: 1.8rem;
+  font-weight: 500;
+  height: 3.9rem;
+  justify-content: center;
+  line-height: 1.5;
+  margin-right: 0rem;
+  white-space: nowrap; 
+}
+.fpay2{
+  width:15rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+  color: #AB5A10;
+  border: 1px solid #AB5A10;
+}
+.fpay:hover{
+  color: #ffffff;
+  background-color: #AB5A10;
+  border: 1px solid black;
+}
+.heead{
+  width: 12.3rem;
+  height: 4.6rem;
+  align-items: baseline;
+  padding: 1.2rem 6.5rem;
+}
+.section2 p{
+  padding: 1.2rem 6.2rem;
+  font-family: Work Sans, 'Source Sans Pro';
+  font-size: 1.4rem;
+  font-weight: 400;
+  height: 10rem;
+  text-align: center;
+  justify-content: center;
+}
+.donate_btn button{
+border: none;
+font-weight: 100;
+border-top-left-radius: 2.6rem;
+border-bottom-right-radius: 2.6rem;
+}
+.donate_btn button:hover{
+background-color: #a86d37;
+}
+body {
+font-family: Work sans;
+box-sizing: border-box;
+}
+.vara{
+   width: 12rem;
+   height: 12rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin-top: 3.5rem;
+   margin-inline-start: auto;
+}
+.cir{
+   width: 4.6rem;
+   height: 4.4rem;
+   border-radius: 50%;    
+   background-color: #D9D9D9;  
+   margin-right: 13px;
+   cursor: pointer;
+}
+.cir b{
+   margin:22px auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.cir img{
+   align-items: center;
+   margin: 21px auto;
+}
+.location{
+   height: 12rem;
+   width: 15rem;
+   display: flex;
+   margin: 0rem 12rem;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   
+}
+.head{
+  width: 83rem;
+  padding-top: 0rem;
+  height: 12rem;
+  margin: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+
+}
+.dum{
+   padding-left: 1rem;
+}
+.dum p{
+font-weight: 200;
+margin: 25px;
+}
+.line{
+   background-color: #FFFFFF;
+   width: 90%;
+   height: 2px;
+   margin: 36px 38px;
+   border-radius: 3px;
+   
+}
+.one{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-content: center;
+   height: 12rem;
+}
+.container {
+  height: 23rem;
+  background-color: rgb(179 125 78);
+  color: aliceblue;
+  padding: 0rem 0rem;
+  text-align: center;
+  /* border: 2px solid black; */
+  border-radius: 8px;
+  margin-bottom: 1.4rem;
+  font-size: 12px;
+}
+
+
+p {
+font-size: 1.3em;
+line-height: 1.53em;
+}
+.second{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.com{width: 12rem;
+    height: 6rem; 
+}
+.com p{
+color: #000000;
+}
+.cost{
+    width: 14rem;
+    display: flex;
+    flex-direction:column;
+}
+.footer{
+padding:1rem;
+}
+.footer-logo-name{
+display: flex;
+align-items: flex-start;
+}
+.footer .follow{
+display: grid;
+grid-template-columns: 1fr 2fr;
+padding: 8px 0.7rem;
+}
+.paraBelowDonate{
+  text-wrap: 100;
+}
