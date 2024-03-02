@@ -109,6 +109,8 @@ $('.logoutBtn').click(function() {
     console.log("logout clicked");
     localStorage.removeItem('authenticated');
     localStorage.removeItem('userName');
+    localStorage.removeItem('rzp_device_id')
+    localStorage.removeItem('rzp_checkout_anon_id')
     $('.signin').show();
     // Hide the logout button
     $(this).hide();
@@ -291,45 +293,45 @@ window.onload = function() {
 }
 
 //razorpay
-
-document.getElementById('donateBtn').addEventListener('click', () => {
-    const amountInput = document.getElementById('amountInput').value;
-    const amount = parseFloat(amountInput);
-    if (isNaN(amount) || amount <= 0) {
-        alert('Please enter a valid amount to pay.');
-        return;
-    }
-  
-    axios.post('http://localhost:8080/api/order', { amount })
-        .then(response => {
-            const { id, currency, amount } = response.data; 
-            const options = {
-                key: 'rzp_test_Xdqdq0R7A7gS4N',
-                amount: amount * 100, 
-                currency: currency,
-                name: 'Unity+',
-                description: 'Donate',
-                // image: '/photos/unity+logo.png',
-                order_id: id,
-                handler: function (response) {
-                    const data = {
-                        razorpay_payment_id: response.razorpay_payment_id,
-                        razorpay_order_id: response.razorpay_order_id,
-                        razorpay_signature: response.razorpay_signature
-                    };
-                    axios.post('http://localhost:8080/api/payment/success', data)
-                        .then(response => {
-                            console.log(response.data);
-                        })
-                        .catch(error => {
-                            console.error('Error verifying payment:', error);
-                        });
-                }
-            };
-            const rzp1 = new Razorpay(options);
-            rzp1.open();
-        })
-        .catch(error => {
-            console.error('Error creating order:', error);
-        });
-});
+if(window.location.path==="/UnityPlus2/frontend/Donate.html"){
+    document.getElementById('donateBtn').addEventListener('click', () => {
+        const amountInput = document.getElementById('amountInput').value;
+        const amount = parseFloat(amountInput);
+        if (isNaN(amount) || amount <= 0) {
+            alert('Please enter a valid amount to pay.');
+            return;
+        }
+        axios.post('http://localhost:8080/api/order', { amount })
+            .then(response => {
+                const { id, currency, amount } = response.data; 
+                const options = {
+                    key: 'rzp_test_Xdqdq0R7A7gS4N',
+                    amount: amount * 100, 
+                    currency: currency,
+                    name: 'Unity+',
+                    description: 'Donate',
+                    // image: '/photos/unity+logo.png',
+                    order_id: id,
+                    handler: function (response) {
+                        const data = {
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_signature: response.razorpay_signature
+                        };
+                        axios.post('http://localhost:8080/api/payment/success', data)
+                            .then(response => {
+                                console.log(response.data);
+                            })
+                            .catch(error => {
+                                console.error('Error verifying payment:', error);
+                            });
+                    }
+                };
+                const rzp1 = new Razorpay(options);
+                rzp1.open();
+            })
+            .catch(error => {
+                console.error('Error creating order:', error);
+            });
+    });
+}
