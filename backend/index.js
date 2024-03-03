@@ -1,11 +1,11 @@
 import express from "express"
 import mongoose from "mongoose"
 // import {  } from "./middlewares/usermiddle"
-import { User, Admin, Otp} from "./backend/db/db.js";
-import { userMiddleware } from "./backend/middlewares/usermiddle.js";
-import { adminMiddleware } from "./backend/middlewares/adminmiddle.js";
+import { User, Admin, Otp} from "./db/db.js";
+import { userMiddleware } from "./middlewares/usermiddle.js";
+import { adminMiddleware } from "./middlewares/adminmiddle.js";
 import bodyParser from "body-parser";
-import { sendOtp } from "./backend/auth_twilio/otp.js";
+import { sendOtp } from "./auth_twilio/otp.js";
 import cors from "cors";
 import shortid from 'shortid';
 import Razorpay from 'razorpay';
