@@ -206,19 +206,25 @@ $(".sub2").on("click", async function(event) {
     return false;
     }
   }
-  async function redirectNgo(ngoType){
-
+async function redirectNgo(ngoType){
     // when a page is redirected the data you fetched is lost in old page for saving it we are using queary params
     // during redirection data is sent through url with showList using encodeURIComponent(), 
     const response= await axios.get(`http://localhost:8080/ngos?ngoType=${ngoType}`)
     const showList = encodeURIComponent(JSON.stringify(response.data.ngoList));
-    window.location.href = `/UnityPlus2/frontend/ngos.html?ngoList=${showList}`
+    window.location.href = `ngos.html?ngoList=${showList}`
  }
+async function redirectDonate(){
+    const response = await axios.get(`http://localhost:8080/ngos/all`)
+    const  allNgos = encodeURIComponent(JSON.stringify(response.data.allNgos));
+    window.location.href=`/UnityPlus2/Donate.html?ngoList=${allNgos}`
+}
 async function fetchedNgoList(){
     // window.location.search returns the query string portion of the URL (i.e., everything after the ? character).
     const urlParams = new URLSearchParams(window.location.search);
     const ngoListData = urlParams.get('ngoList');
+    // console.log(ngoListData)
     const fetchedData= JSON.parse(ngoListData)
+    console.log(fetchedData);
     for (let i = 0; i < fetchedData.length; i++) {
         const parent = document.createElement("div");
         parent.classList.add("parent");
@@ -287,13 +293,13 @@ async function fetchedNgoList(){
     }
 }
 window.onload = function() {
-    if (window.location.pathname === "/UnityPlus2/frontend/ngos.html") {
+    if (window.location.pathname === "/UnityPlus2/ngos.html" || window.location.pathname === "/UnityPlus2/Donate.html" ) {
         fetchedNgoList();
     }
 }
 
 //razorpay
-if(window.location.path==="/UnityPlus2/frontend/Donate.html"){
+if(window.location.pathname==="/UnityPlus2/Donate.html"){
     document.getElementById('donateBtn').addEventListener('click', () => {
         const amountInput = document.getElementById('amountInput').value;
         const amount = parseFloat(amountInput);

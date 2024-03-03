@@ -123,6 +123,40 @@ app.get("/ngos",async(req,res)=>{
         ngoList: ngosList
       })
 })
+app.get("/ngos/all", async (req,res)=>{
+  // const allNgos= await Admin.find({})
+  const ngosArray= await Admin.aggregate([
+    {
+          $project:
+            {
+              _id: 0,
+              orgName: 1,
+              email: 1,
+              location: 1,
+              classification: 1,
+              description: 1,
+              websiteUrl: 1
+            },
+        },
+        {
+          $group: {
+            _id: "$classification",
+            ngos: {
+              $push: "$$ROOT",
+            },
+          },
+        }
+  ])
+  const allNgos= []
+  for (let i=0; i<ngosArray.length; i++){
+    for (let j=0; j<ngosArray[i].ngos.length; j++){
+      allNgos.push(ngosArray[i].ngos[j])
+    }
+  }
+  res.json({
+    allNgos: allNgos
+  })
+})
 // Admin-Routes
 
 app.post("/admin/signup",adminMiddleware(true), async(req,res)=>{

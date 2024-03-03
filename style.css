@@ -639,19 +639,19 @@ form{
     }
   }
 
-  body::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
+  /* body::-webkit-scrollbar {
+    width: 5px;
 }
 body::-webkit-scrollbar-track {
-  background:#bd895877 ; /* Color of the track */
+  background:#bd895877 ;
   opacity: 0.7;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #af6a2abd; /* Color of the scroll thumb */
+  background: #af6a2abd;
   border-radius: 20px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: #ab5b10bd; /* Color of the scroll thumb on hover */
-}
+  background: #ab5b10bd;
+} */
