@@ -169,6 +169,28 @@ $(".sub2").on("click", async function(event) {
             otp: otpValueNumber
         })
         console.log(verifyOtpApi.data);
+        if(verifyOtpApi.status===200){
+            // setting an item in local storage and assigning its value to true
+            localStorage.setItem('authenticated', true);
+            const changeSignIn= document.getElementById("subFinalSignIn")
+            const encodedPhone= encodeURIComponent(`+91${phoneInput}`)
+            const changeSignInApi= await axios.get(`http://localhost:8080/user/logged-in?phone=${encodedPhone}`)
+            const fetchedName= changeSignInApi.data
+            const finalName= fetchedName[0].name
+            // changeSignIn.innerHTML=finalName;
+            // using local storage 
+            localStorage.setItem('userName', finalName);
+            $('#subFinalSignIn').text(finalName); // Display user's name
+            $('#subFinalSignIn').css({
+                "background": "none",
+                "color": "#6c4f36",
+                "cursor": "text"
+                })
+            $('.signin').hide(); // Hide the sign-in form
+            // $(".logoutBtn").css("display","flex")
+            $(".logoutBtn").show()
+            $(".newsign").hide()
+        }
     }
     catch(err){
         throw new Error("Wrong OTP")
