@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 .logoutBtn{
-  background-color: #c48149;
+  background-color: #aa7345f0;
   border-radius: 15px 0 15px 15px;
   padding: 3px 10px;
   cursor: pointer;
@@ -30,7 +30,7 @@ body {
   display: none;
 }
 .logoutBtn:hover{
-  background-color: #b05e11dc;
+  background-color: #95571ddc
 }
 .signin{
   display: none;
