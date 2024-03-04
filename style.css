@@ -233,6 +233,11 @@ form{
   flex-direction: column;
   justify-content: center;
 }
+#register-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .otp-input-fields{
   background-color: transparent;
@@ -523,6 +528,18 @@ form{
   }
   .newsign{
     width: 33rem;
+  }
+  .section-5{
+    margin: 1.3rem 1rem;
+    display: flex;
+  }
+  .AboutUs a{
+    display: flex;
+    justify-content: center;
+  }
+  .write1,.about-donate-btn,.donate-charity {
+    width: 100%;
+    margin: 0;
   }
 }
 @media (max-width: 574px){
