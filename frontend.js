@@ -1,6 +1,9 @@
 $(".signin-btn").on("click", function(){
     var a=$(".signin");
     a.css({"display": "block","transition":"opacity 3s ease"});
+    $(".darkBg").css("display", "block")
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
 });
 
 $(".close").on("click", function(){

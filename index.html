@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="darkBg"></div>
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand loggo" href="#Home"><span style="color: #592B00C9;">Unity</span><span
@@ -135,25 +136,33 @@
     </nav>
     <!-- REGISTER AS NGO -->
     <div class="flex register">
-      <div class="head flex"><h2>Register as NGO</h2><span class="close">&times;</span></div>
-      <div class="inner">
-          <form class="form1" action="">
-              <div class="flex inputDiv first" >
-                  <label for="orgName">Organization Name</label>
-                  <input type="text" name="orgName" id="orgName" class="orgNameSame input" required>
-                  </div>
-              <div class="flex inputDiv second" >
-                  <label for="email">Email Address</label>
-                  <input type="text" name="email" id="email" class="emailSame input" required>
-                  </div>
-              <div class="flex inputDiv third">
-                  <label for="phone">Phone Number</label>
-                  <input type="text" name="phone" id="phone" class="phoneSame input" required>
-                  </div> 
-              <button type="submit" class="adminSubmit">Submit</button>           
-          </form>
+      <div class="unityName">
+        <img src="photos/unity+logo.png" style="width: 27px ; height: 25px;" alt="">
+        <p>Unity <span style="color: #ab5b10bd;">+</span></p>
       </div>
+      <div class="registerField">
+
+    
+      <div class="head flex"><h4>Register as NGO</h4><span class="close">&times;</span></div>
+      <div class="inner">
+        <form class="form1" action="">
+          <div class="flex inputDiv first">
+              <label for="orgName">Organization:</label>
+              <input type="text" name="orgName" id="orgName" class="orgNameSame input" required>
+          </div>
+          <div class="flex inputDiv second">
+              <label for="email">Email:</label>
+              <input type="text" name="email" id="email" class="emailSame input" required>
+          </div>
+          <div class="flex inputDiv third">
+              <label for="phone">Phone:</label>
+              <input type="text" name="phone" id="phone" class="phoneSame input" required>
+          </div>
+          <button type="submit" class="adminSubmit">Submit</button>
+      </form>
       
+      </div>
+    </div>
   </div>
   <div id="Home" class="photos-section">
     <div class="image-set">

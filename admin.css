@@ -11,25 +11,45 @@
   }
   .register{
     display: none;
-    margin-block: 6px;
-    position: absolute ;
+    position: fixed ;
     top: 50%;
-    left: 79%;
+    left: 83.4%;
     transform: translate(-50%,-50%);
     height: 100vh;
-    width: 40vw;
+    width: 33vw;
     background-color: white;
-    color: #ccc;
+    color: #745438;
     box-shadow: 0px 10px 14px 0px rgb(171 129 93) ;
-    justify-content: center;
-    border-radius: 12px;
-    padding: 30px 14px;
+    background-color: rgb(255 246 235);
+    /* border-radius: 8px; */
+    padding: 22px 10px;
     z-index: 100;
+    overflow: scroll;
+  }
+  .registerField{
+    margin-top: 11rem;
   }
   .head{
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .darkBg{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.658);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+  }
+  .unityName{
+    display: flex;
+    align-items: center;
+  }
+  .unityName>*{
+    margin: 0 5px; 
+    font-size: 21px;
+    cursor: default;
   }
   .inner{
     width: auto;
@@ -37,7 +57,7 @@
   .form1{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
   }
   .form1 input[type="text"]{
@@ -48,28 +68,24 @@
     border: 1px solid #ccc;
     margin-bottom: 13px;
     align-items: center;
-    
-    background-color: transparent;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 5px;
     box-sizing: border-box;
-  }
-  .inputDiv {
-    width: 70%;  
-    font-size: 1.25rem;
+    background: none;
   }
   .adminSubmit{
-    width: 27rem;
+    width: 10rem;
     height: 2.3rem;
     font-size: 1.3rem;
-    border-radius:5px ;
-    background-color: #7b3e05c9;
+    border-radius:1rem ;
+    background-color: #c8864f;
     margin-block: 20px 14px;
-    color: bisque;
+    color: white;
     border: none;
+    align-self: center;
   }
   .adminSubmit:hover{
-    background-color:#884506ab ;
+    background-color:#b05e11dc ;
     cursor: pointer;
   }
   
