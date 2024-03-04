@@ -138,7 +138,10 @@ body {
 /* form tag */
 form{
   margin: auto;
-  width: 22rem;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .newsign {
   box-sizing: border-box;
@@ -291,6 +294,10 @@ form{
 .nav-link-item{
   display: flex;
   justify-content: space-between;
+}
+.dropdown-item:focus{
+  background-color: #ab5b10bd;
+  color: white;
 }
 /* first section */
 .photos-section,.section-5{

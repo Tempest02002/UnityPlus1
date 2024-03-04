@@ -1,0 +1,68 @@
+*{
+    font-family: 'Work Sans';
+  }  
+  body {
+    background-color: rgba(255, 246, 235, 0.671);
+    
+  }
+  .flex{
+    display: flex;
+    flex-direction: column;
+  }
+  .register{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40vw;
+    box-shadow: 0px 10px 14px 0px rgb(171 129 93) ;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 30px 14px;
+  }
+  .head{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+  .inner{
+    width: auto;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  form input[type="text"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 13px;
+    align-items: center;
+    
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .inputDiv {
+    width: 70%;  
+    font-size: 1.25rem;
+  }
+  .adminSubmit{
+    width: 27rem;
+    height: 2.3rem;
+    font-size: 1.3rem;
+    border-radius:5px ;
+    background-color: #7b3e05c9;
+    margin-block: 20px 14px;
+    color: bisque;
+    border: none;
+  }
+  .adminSubmit:hover{
+    background-color:#884506ab ;
+    cursor: pointer;
+  }
