@@ -120,6 +120,7 @@ async function handleSignInResponse(verifyOtpApi, phoneInput) {
         $('.signin').hide(); // Hide the sign-in form
         $(".logoutBtn").show();
         $(".closepopup").hide();
+        $(".dropdown").hide()
     } else {
         throw new Error("User does not exist, Register now!");
     }
@@ -151,9 +152,9 @@ $('.logoutBtn').click(function() {
     // Hide the logout button
     $(this).hide();
     location.reload();
-
 });
 $('.otp__digit').on('input', function() {
+    $('.otp__digit').attr("maxlength", "1");
     var $this = $(this);
     if ($this.val().length >= 1) {
     $this.next('.otp__digit').focus();
