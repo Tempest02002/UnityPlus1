@@ -77,7 +77,8 @@
     width: 10rem;
     height: 2.3rem;
     font-size: 1.3rem;
-    border-radius:1rem ;
+    border-top-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
     background-color: #c8864f;
     margin-block: 20px 14px;
     color: white;
