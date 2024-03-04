@@ -58,38 +58,74 @@ $(".sub").on("click", async function(event) {
             phone: `+91${phoneInput}`,
             otp: otpValueNumber
         })
-        // console.log(verifyOtpApi.status);
-        if(verifyOtpApi.status===200){
-            // setting an item in local storage and assigning its value to true
-            localStorage.setItem('authenticated', true);
-            const changeSignIn= document.getElementById("subFinalSignIn")
-            const encodedPhone= encodeURIComponent(`+91${phoneInput}`)
-            const changeSignInApi= await axios.get(`http://localhost:8080/user/logged-in?phone=${encodedPhone}`)
-            const fetchedName= changeSignInApi.data
-            const finalName= fetchedName[0].name
-            // changeSignIn.innerHTML=finalName;
-            // using local storage 
-            localStorage.setItem('userName', finalName);
-            $('#subFinalSignIn').text(finalName); // Display user's name
-            $('#subFinalSignIn').css({
-                "background": "none",
-                "color": "#6c4f36",
-                "cursor": "text"
-                })
-            $('.signin').hide(); // Hide the sign-in form
-            // $(".logoutBtn").css("display","flex")
-            $(".logoutBtn").show()
-            $(".form").hide()
+        console.log(verifyOtpApi.status);
+        
+        try {
+            await handleSignInResponse(verifyOtpApi, phoneInput);
+        } catch (error) {
+            console.error(error.message);
+        }
+        
+        // if(verifyOtpApi.status===200){
+        //     // setting an item in local storage and assigning its value to true
+        //     localStorage.setItem('authenticated', true);
+        //     const changeSignIn= document.getElementById("subFinalSignIn")
+        //     const encodedPhone= encodeURIComponent(`+91${phoneInput}`)
+        //     const changeSignInApi= await axios.get(`http://localhost:8080/user/logged-in?phone=${encodedPhone}`)
+        //     const fetchedName= changeSignInApi.data
+        //     const finalName= fetchedName[0].name
+        //     // changeSignIn.innerHTML=finalName;
+        //     // using local storage 
+        //     localStorage.setItem('userName', finalName);
+        //     $('#subFinalSignIn').text(finalName); // Display user's name
+        //     $('#subFinalSignIn').css({
+        //         "background": "none",
+        //         "color": "#6c4f36",
+        //         "cursor": "text"
+        //         })
+        //     $('.signin').hide(); // Hide the sign-in form
+        //     // $(".logoutBtn").css("display","flex")
+        //     $(".logoutBtn").show()
+        //     $(".form").hide()
             
-        }
-        else{
-            throw new Error("User non exist, Register now!")
-        }
+        // }
+        // else{
+        //     throw new Error("User non exist, Register now!")
+        // }
     }
     catch(err){
         throw new Error("User does not exist, Register now!")
     }
 });
+
+async function handleSignInResponse(verifyOtpApi, phoneInput) {
+    
+    if (verifyOtpApi.status === 200) {
+        // setting an item in local storage and assigning its value to true
+        localStorage.setItem('authenticated', true);
+        const changeSignIn = document.getElementById("subFinalSignIn");
+        const encodedPhone = encodeURIComponent(`+91${phoneInput}`);
+        const changeSignInApi = await axios.get(`http://localhost:8080/user/logged-in?phone=${encodedPhone}`);
+        const fetchedName = changeSignInApi.data;
+        const finalName = fetchedName[0].name;
+        // changeSignIn.innerHTML = finalName;
+        // using local storage 
+        localStorage.setItem('userName', finalName);
+        $('#subFinalSignIn').text(finalName); // Display user's name
+        $('#subFinalSignIn').css({
+            "background": "none",
+            "color": "#6c4f36",
+            "cursor": "text"
+        });
+        $('.signin').hide(); // Hide the sign-in form
+        $(".logoutBtn").show();
+        $(".closepopup").hide();
+    } else {
+        throw new Error("User does not exist, Register now!");
+    }
+}
+
+
 // this will execute code when DOM is fully loaded, any code in this will work one DOM is fully loaded
 $(document).ready(function (){
     if(localStorage.getItem('authenticated')){
@@ -169,28 +205,34 @@ $(".sub2").on("click", async function(event) {
             otp: otpValueNumber
         })
         console.log(verifyOtpApi.data);
-        if(verifyOtpApi.status===200){
-            // setting an item in local storage and assigning its value to true
-            localStorage.setItem('authenticated', true);
-            const changeSignIn= document.getElementById("subFinalSignIn")
-            const encodedPhone= encodeURIComponent(`+91${phoneInput}`)
-            const changeSignInApi= await axios.get(`http://localhost:8080/user/logged-in?phone=${encodedPhone}`)
-            const fetchedName= changeSignInApi.data
-            const finalName= fetchedName[0].name
-            // changeSignIn.innerHTML=finalName;
-            // using local storage 
-            localStorage.setItem('userName', finalName);
-            $('#subFinalSignIn').text(finalName); // Display user's name
-            $('#subFinalSignIn').css({
-                "background": "none",
-                "color": "#6c4f36",
-                "cursor": "text"
-                })
-            $('.signin').hide(); // Hide the sign-in form
-            // $(".logoutBtn").css("display","flex")
-            $(".logoutBtn").show()
-            $(".newsign").hide()
-        }
+    //     if(verifyOtpApi.status===200){
+    //         // setting an item in local storage and assigning its value to true
+    //         localStorage.setItem('authenticated', true);
+    //         const changeSignIn= document.getElementById("subFinalSignIn")
+    //         const encodedPhone= encodeURIComponent(`+91${phoneInput}`)
+    //         const changeSignInApi= await axios.get(`http://localhost:8080/user/logged-in?phone=${encodedPhone}`)
+    //         const fetchedName= changeSignInApi.data
+    //         const finalName= fetchedName[0].name
+    //         // changeSignIn.innerHTML=finalName;
+    //         // using local storage 
+    //         localStorage.setItem('userName', finalName);
+    //         $('#subFinalSignIn').text(finalName); // Display user's name
+    //         $('#subFinalSignIn').css({
+    //             "background": "none",
+    //             "color": "#6c4f36",
+    //             "cursor": "text"
+    //             })
+    //         $('.signin').hide(); // Hide the sign-in form
+    //         // $(".logoutBtn").css("display","flex")
+    //         $(".logoutBtn").show()
+    //         $(".newsign").hide()
+    //     }
+
+    try {
+        await handleSignInResponse(verifyOtpApi, phoneInput);
+    } catch (error) {
+        console.error(error.message);
+    }
     }
     catch(err){
         throw new Error("Wrong OTP")
