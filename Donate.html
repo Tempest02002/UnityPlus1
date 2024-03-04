@@ -15,16 +15,6 @@
 </head>
 
 <body>
-  <script>
-    function back(element) {
-      $(".amount").css("background-color", "#ffffff").css("color", "#000000");
-      $(element).css("background-color", "#AB5A10").css("color", "#ffffff");
-      $(".other-amount").css("background-color", "#ffffff").css("color","#000000")
-    }
-  </script>
-
-</html>
-
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand loggo" href="index.html"><span style="color: #592B00C9;">Unity</span><span
@@ -251,6 +241,12 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="frontend.js"></script>
+<script>
+  function back(element) {
+    $(".amount").css("background-color", "#ffffff").css("color", "#000000");
+    $(element).css("background-color", "#AB5A10").css("color", "#ffffff");
+    $(".other-amount").css("background-color", "#ffffff").css("color","#000000")
+  }
+</script>
 </body>
-
 </html>

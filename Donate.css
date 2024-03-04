@@ -2,7 +2,7 @@
   font-family: 'Work Sans';
 }
 body{
-  background-color:  rgba(255, 246, 235, 0.671);
+  background-color: rgba(255, 246, 235, 0.671) !important;
 }  
 /* Navbar */
 /* .navbar{
@@ -243,101 +243,44 @@ padding: 8px 0.7rem;
   text-wrap: 100;
 } */
 
-.parent {
-  margin: 20px;
-  background-color: #dcc5a28f;
-  border: 3px double #b37f50;
-  border-radius: 20px;
-  box-shadow: 2px 1px 5px #b37f50;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10px 15px 10px;
-  /* text-align: center; */
-  flex-direction: column;
-}
-
-.head {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.combined {
-  display: flex;
-  flex-flow: wrap;
-  padding: 0 5px;
-}
-.ngoImg{
-  width: 21rem;
-  border-radius: 2.5rem;
-  padding: 0 0px 15px 7px;
-  object-fit: cover;
-}
-
-.left-content {
-  flex-grow: 1;
-  /* text-align: center; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.description {
-  width: 100%;
-  /* margin: 0 auto; */
-  padding: 0 0 0 20px;
-  box-sizing: border-box;
-  /* text-align: center; */
-  max-width: 1000px;
-}
-
-.right-content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-}
-
-.right-content>* {
-  margin: 5px 0;
-}
-.email{
-  color: rgb(43, 20, 20);
-  text-decoration: none;
-}
-.email:hover{
-  color: #84450a;
-}
-
-.btn {
-  background-color: #ab5b10bd;
-  border: none;
-  color: white;
-  width: 10rem;
-}
-
-.btn:hover {
-  background-color: #b05e11dc;
-  color: white;
-}
-
-@media(max-width: 1420px){
-  .combined{
-    justify-content: center;
-  }
-  .description{
+@media(max-width: 1000px){
+  .headingSection1{
+    all: unset;
+    color: #AB5A10;
     text-align: center;
-    padding: 0;
   }
-  .right-content{
-    justify-content: space-around;
+  .section1{
+    flex-direction: column;
   }
 }
-@media (max-width: 420px){
-  .parent{
-    overflow: scroll;
+@media(max-width: 839px){
+  .contentSection1{
+    flex-direction: column;
+  }
+  .donate{
+    margin: 1rem 0 0 0;
+  }
+}
+@media(max-width: 473px){
+  .amount{
+    height: unset;
+    width: 7.2rem;
+  }
+  .other-amount{
+    width: 15rem;
+  }
+  .donateBtn{
+    width: 6.5rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+  }
+}
+@media(max-width: 374px){
+  .amount{
+    height: unset;
+    width: 6rem;
+  }
+  .other-amount{
+    width: 13rem;
   }
 }
