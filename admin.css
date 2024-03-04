@@ -45,10 +45,11 @@
   .unityName{
     display: flex;
     align-items: center;
+    height: 100px;
   }
   .unityName>*{
     margin: 0 5px; 
-    font-size: 21px;
+    font-size: 38px;
     cursor: default;
   }
   .inner{
