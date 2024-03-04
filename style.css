@@ -2,7 +2,7 @@
   font-family: 'Work Sans';
 }  
 body {
-  background-color: rgba(255, 246, 235, 0.671);
+  background-color: rgba(233, 218, 199, 0.671);
   /* background-color: #AB5A10; */
 }
 /* Navbar */
@@ -138,10 +138,7 @@ body {
 /* form tag */
 form{
   margin: auto;
-    width: 22rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 22rem;
 }
 .newsign {
   box-sizing: border-box;
@@ -294,10 +291,6 @@ form{
 .nav-link-item{
   display: flex;
   justify-content: space-between;
-}
-.dropdown-item:focus{
-  background-color: #ab5b10bd;
-  color: white;
 }
 /* first section */
 .photos-section,.section-5{

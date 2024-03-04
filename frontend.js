@@ -153,13 +153,23 @@ $('.logoutBtn').click(function() {
     $(this).hide();
     location.reload();
 });
-$('.otp__digit').on('input', function() {
+$('.otp__digit').on('input', function(e) {
     $('.otp__digit').attr("maxlength", "1");
     var $this = $(this);
     if ($this.val().length >= 1) {
-    $this.next('.otp__digit').focus();
+        $this.next('.otp__digit').focus();
     }
 });
+
+$('.otp__digit').on('keydown', function(e) {
+    if (e.keyCode == 8) { 
+        var $this = $(this)
+        if ($this.val().length == 0) {
+            $this.prev('.otp__digit').focus();
+        }
+    }
+});
+
 
 $(".otpver1").on('click',async function(event) {
     event.preventDefault()
