@@ -4,6 +4,7 @@ $(".signin-btn").on("click", function(){
 });
 
 $(".close").on("click", function(){
+    location.reload();
     a.css({"display": "none","transition":"opacity 3s ease"});
     var m=$(".newsign");
     m.css({"display": "none","transition":"opacity 3s ease"});
