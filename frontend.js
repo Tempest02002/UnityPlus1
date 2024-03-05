@@ -40,7 +40,7 @@ $(".otpver").on("click",async function(event){
             $(".sub").css("display","block");
           }
         catch(err){
-            document.getElementById("notExist").innerHTML="Couldn't find your account"
+            $("#notExist").css("display","block")
             // alert("User does not exist, Register now!")
             throw new Error("User does not Exist, Register now")
         }
@@ -125,6 +125,7 @@ async function handleSignInResponse(verifyOtpApi, phoneInput) {
         $(".logoutBtn").show();
         $(".closepopup").hide();
         $(".dropdown").hide()
+        location.reload()
     } else {
         throw new Error("User does not exist, Register now!");
     }
