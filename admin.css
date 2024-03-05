@@ -13,7 +13,7 @@
     display: none;
     position: fixed ;
     top: 50%;
-    left: 83.4%;
+    left: 130%;
     transform: translate(-50%,-50%);
     height: 100vh;
     width: 33vw;
@@ -25,6 +25,7 @@
     padding: 10px;
     z-index: 100;
     /* overflow: scroll; */
+    transition: all 300ms;
   }
   .registerField{
     margin-top: 10rem;
