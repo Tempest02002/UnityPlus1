@@ -35,9 +35,9 @@ $(".otpver").on("click",async function(event){
             $(".numberEntity").css("display","none");
             $(".reg").css("display","none");
             $(".otp-input-fields").find(".otp__field__1").focus();
-            
             $(".otpver").css("display","none");
             $(".sub").css("display","block");
+            $("#notExist").css("display","none")
           }
         catch(err){
             $("#notExist").css("display","block")
@@ -261,11 +261,12 @@ $(".sub2").on("click", async function(event) {
     if (/^\d{10}$/.test(mobileNumber)) {
         // $(".form h6").css("display","none");
     $("#number").css({"border-color":"black","box-shadoow":"0 0 8px 0 #b47f50"});
+    $("#alertValidNumber1").css("display","none");
       return true;
     }
     else {
     //   alert("Please enter a valid 10-digit mobile number");
-    $(".form h6").css("display","block");
+    $("#alertValidNumber1").css("display","block");
     $("#number").css({"border-color":"rgb(168, 8, 8)","box-shadoow":"none"});
     return false;
     }
@@ -277,10 +278,12 @@ $(".sub2").on("click", async function(event) {
     if (/^\d{10}$/.test(phone) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && name.length>1 ) {
         $(".username, .email, .phone").css({"border-color":"black","box-shadoow":"0 0 8px 0 #b47f50"});
         // $("#newsign_form #wrongInputRegister").css("display","none");
+        $("#alertValidNumber2").css("display","none");
       return true;
     }
     else {
-        alert("Wrong Inputs")
+        $("#alertValidNumber2").css("display","none");
+        // alert("Wrong Inputs")
     $(".newsign_form h6").css("display","block");
     $(".username, .email, .phone").css({"border-color":"rgb(168, 8, 8)","box-shadoow":"none"});
     return false;

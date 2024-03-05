@@ -84,7 +84,7 @@
                       </div>
                     </div>
                     <input class="sub" type="submit" value="Submit">
-                    <h6 >Please Enter a valid number</h6>
+                    <h6 id="alertValidNumber1" style="display: none;">Please Enter a valid number</h6>
                     <p class="reg">Sign up now</p>
                     <p id="notExist" style="color: red; display: none; text-decoration: none;">Couldn't find your account</p>
                     <button class="otpver">Submit</button>
@@ -124,7 +124,7 @@
                       </div>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-primary sub2">
-                    <h6>Please Enter valid details</h6>
+                    <h6 id="alertValidNumber2" style="display: none;">Please Enter valid details</h6>
                     <button type="submit" class="btn otpver1">Submit</button>
                   </form>
                 </div>
@@ -148,15 +148,15 @@
         <form class="form1" action="">
           <div class="flex inputDiv first">
               <label for="orgName">Organization:</label>
-              <input type="text" name="orgName" id="orgName" class="orgNameSame input" required>
+              <input type="text" name="orgName" id="orgName" class="form-control orgNameSame input" required>
           </div>
           <div class="flex inputDiv second">
               <label for="email">Email:</label>
-              <input type="text" name="email" id="email" class="emailSame input" required>
+              <input type="text" name="email" id="email" class="form-control emailSame input" required>
           </div>
           <div class="flex inputDiv third">
               <label for="phone">Phone:</label>
-              <input type="text" name="phone" id="phone" class="phoneSame input" required>
+              <input type="text" name="phone" id="phone" class="form-control phoneSame input" required>
           </div>
           <button type="submit" class="adminSubmit">Submit</button>
       </form>

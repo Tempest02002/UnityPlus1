@@ -22,12 +22,12 @@
     box-shadow: 0px 10px 14px 0px rgb(171 129 93) ;
     background-color: rgb(255 246 235);
     /* border-radius: 8px; */
-    padding: 22px 10px;
+    padding: 10px;
     z-index: 100;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
   .registerField{
-    margin-top: 11rem;
+    margin-top: 10rem;
   }
   .head{
     margin-bottom: 1rem;
@@ -45,11 +45,11 @@
   .unityName{
     display: flex;
     align-items: center;
-    height: 100px;
+    /* height: 100px; */
   }
   .unityName>*{
     margin: 0 5px; 
-    font-size: 38px;
+    font-size: 1.4rem;
     cursor: default;
   }
   .inner{
@@ -66,16 +66,22 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     margin-bottom: 13px;
     align-items: center;
     padding: 5px 10px;
     border-radius: 5px;
     box-sizing: border-box;
     background: none;
+    border: none;
+    border-style: ridge;
+  }
+  .inputDiv .input:focus{
+    border-style: outset;
+    border: #745438;
   }
   .adminSubmit{
-    width: 10rem;
+    width: 9rem;
     height: 2.3rem;
     font-size: 1.3rem;
     border-top-left-radius: 1.6rem;

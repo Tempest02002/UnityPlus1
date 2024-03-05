@@ -87,7 +87,6 @@ body {
 .form input[type="text"] {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
   /* margin-bottom: 1.5rem; */
@@ -202,14 +201,17 @@ form{
 .form-control {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 5px;
   box-sizing: border-box;
+  border-style: outset;
+  background: none;
 }
 
 .form-control:focus {
-  border-color: #b58052;
-  box-shadow: 0 0 8px 0 #b47f50;
+  border-color: #dbdbdb00;
+  box-shadow: 0 0 8px 0 #684b32c4;
+  background: none;
 }
 
 .btn-primary:not(.sub2) {
