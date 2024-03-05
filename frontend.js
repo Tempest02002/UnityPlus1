@@ -1,24 +1,34 @@
 $(".signin-btn").on("click", function(){
     var a=$(".signin");
-    a.css({"display": "block","transition":"opacity 3s ease"});
+    a.css("display","flex");
     $(".darkBg").css("display", "block")
     const scrollY = window.scrollY;
     document.body.style.position = 'fixed';
+    a.css("left","50%")
+    a.css("top","50%")
+    $(".signin-btn").hide()
+})
+$(".close").on("click", function(){
+    setTimeout(function() {
+        location.reload();
+    }, 300);
+    var a = $(".signin");
+    var m=$(".newsign");
+    let admin=$(".register");
+    a.css("left","130%");
+    a.css("top","0%");
+    m.css("left","130%");
+    m.css("top","0%");
+    admin.css("left","130%")
 });
 
-$(".close").on("click", function(){
-    location.reload();
-    var a=$(".signin");
-    a.css({"display": "none","transition":"opacity 3s ease"});
-    var m=$(".newsign");
-    m.css({"display": "none","transition":"opacity 3s ease"});
-});
 
 $(".reg").on("click", function(){
     var a=$(".signin");
     $(".btn-primary").css("display","none");
-    a.css({"display": "none","transition":"opacity 3s ease-out"});
-    var m=$(".newsign").css("display","block");
+    a.hide()
+    var m=$(".newsign").css("display","flex");
+    
 });
 
 $(".otpver").on("click",async function(event){
