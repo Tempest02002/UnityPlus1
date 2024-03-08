@@ -77,7 +77,12 @@ $(".sub").on("click", async function(event) {
         console.log(verifyOtpApi.status);
         
         try {
-            await handleSignInResponse(verifyOtpApi, phoneInput);
+            $(".userButton").css("display","inline-block")
+            $(".signin").hide()
+            $(".darkBg").hide()
+            $(".userButton").on("click", async function(){
+                await handleSignInResponse(verifyOtpApi, phoneInput);
+            })
         } catch (error) {
             console.error(error.message);
         }
@@ -127,6 +132,7 @@ async function handleSignInResponse(verifyOtpApi, phoneInput) {
         // changeSignIn.innerHTML = finalName;
         // using local storage 
         localStorage.setItem('userName', finalName);
+
         $('#subFinalSignIn').text(finalName); // Display user's name
         $('#subFinalSignIn').css({
             "background": "none",
@@ -137,6 +143,7 @@ async function handleSignInResponse(verifyOtpApi, phoneInput) {
         $(".logoutBtn").show();
         $(".closepopup").hide();
         $(".dropdown").hide()
+
         location.reload()
     } else {
         throw new Error("User does not exist, Register now!");

@@ -85,12 +85,25 @@ body {
     width: 300px;
     height: 300px;
 }
+.userButton{
+  display: none;
+  border: none;
+  background: #a25e1dbd;
+  border-radius: 7px;
+  padding: 0px 10px;
+  font-size: 17px;
+}
+.userButton:hover{
+  background-color: #8c4c10bd;
+}
 .form input[type="text"] {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
   box-sizing: border-box;
   /* margin-bottom: 1.5rem; */
+  border: 1px solid #b07d51;
+  font-size: 1.15rem;
 }
 .numberEntity{
   display: flex;
@@ -134,6 +147,9 @@ body {
   cursor: pointer;
   text-align: center;
   margin: 0;
+}
+.otp__digit{
+  width: 2.5rem !important;
 }
 /* form tag */
 form{
@@ -232,7 +248,7 @@ form{
 }
 .otp{
   display: none;
-  width: 30rem;
+  /* width: 30rem; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
