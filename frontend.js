@@ -6,6 +6,9 @@ $(".signin-btn").on("click", function(){
     document.body.style.position = 'fixed';
     a.css("left","50%")
     a.css("top","50%")
+    // a.css("padding","20px")
+    a.css("width","28rem")
+    a.css("height","22rem")
     $(".signin-btn").hide()
 })
 $(".close").on("click", function(){
