@@ -49,7 +49,7 @@ body {
   z-index: 100;
   backdrop-filter: blur(10px);
   justify-content: center;
-  transition: .6s;
+  transition: .5s;
 }
 .signin_head{
   text-align: center;

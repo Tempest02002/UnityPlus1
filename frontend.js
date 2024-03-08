@@ -18,10 +18,9 @@ $(".close").on("click", function(){
     var a = $(".signin");
     var m=$(".newsign");
     let admin=$(".register");
-    a.css("left","130%");
-    a.css("top","0%");
-    m.css("left","130%");
-    m.css("top","0%");
+    $(".darkBg").css("display", "none")
+    a.hide()
+    m.hide()
     admin.css("left","130%")
 });
 
